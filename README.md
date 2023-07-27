@@ -369,11 +369,4 @@ este proyecto es laravel 10
 
 1. ejecutamos ```npm run build``` para comprimir el js y css, lo generado se coloca en la carpeta ```public/build```
 2. abrir el .gitignore y quitar esto ```/public/build``` esto es para que git si suba lo que se compile para produccion, esto es para no tener que compilar 'ejecutar el pasado comando' en la terminal del servidor a donde vayamos a subir, igual este paso es opcional, si queremos o no ejecutar el paso 1 en el servidor como tal
-3. crear un repositorio en github y subir todos los cambios
-4. creamos una nueva rama que sera la que llevaremos a producción ```git checkout -b deployment```
-5. ahora abrimos el archivo ```AppServiceProvider``` y alli, en el metodo ```boot()``` agregamos lo siguiente:
-```
-if ($this->app->environment('production')) {
-    URL::forceScheme('https');
-}
-```
+3. hay mas pasos pero no los segui haciendo porque eran para railway y ademas el profesor los estaba pasando a la rama master y no me gusto
