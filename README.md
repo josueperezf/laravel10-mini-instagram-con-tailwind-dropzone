@@ -49,7 +49,7 @@ $this->validate($request, [
 ```
 $this->validate($request, [
     'username' => [
-        'unique:users,username,'.auth()->user()->id,  // campo unico es username
+        'unique:users,username,'.auth()->user()->id,  // campo unico es username, users hace referencia al nombre de la tabla
     ]
 ]);
 ```
@@ -370,3 +370,14 @@ este proyecto es laravel 10
 1. ejecutamos ```npm run build``` para comprimir el js y css, lo generado se coloca en la carpeta ```public/build```
 2. abrir el .gitignore y quitar esto ```/public/build``` esto es para que git si suba lo que se compile para produccion, esto es para no tener que compilar 'ejecutar el pasado comando' en la terminal del servidor a donde vayamos a subir, igual este paso es opcional, si queremos o no ejecutar el paso 1 en el servidor como tal
 3. hay mas pasos pero no los segui haciendo porque eran para railway y ademas el profesor los estaba pasando a la rama master y no me gusto
+
+
+# pasos para hacer un deploy endom cloud
+
+<https://domcloud.co/>
+
+1. desde un navegador debemos loguearnos, preferiblemente desde github, para que tome el proyecto desdea alli
+2. estando en la url <https://my.domcloud.co/user/host/> hacemos click donde dice ```agregar website```
+3. ahora hacemos click en  ```No, I want to start from scratch```, ya que no queremos utilizar ningun template, ya que nuestro proyecto ya tiene laravel instalado
+4. donde dice ```custom template```, borramos todo el texto que va alli
+5. aqui esta la guia de los pasos <https://blogjc.vercel.app/post/easy-deploy-php-laravel> debemos bajar con el scroll y seguir leyendo. debemos estar atento si estamos utilizando livewire 2 o 3. si es que lo estamos utilizando
